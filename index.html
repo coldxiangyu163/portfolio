@@ -4,337 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="王超 | AI Full-Stack Engineer — 11年全栈经验，专注 AI Agent 与 LLM 应用落地">
-    <meta name="keywords" content="AI工程师,全栈开发,LLM,AI Agent,MCP,自动化,Python,React,王超">
+    <meta name="keywords" content="AI工程师,全栈开发,LLM,AI Agent,MCP,Python,React,王超">
     <meta name="author" content="王超 Wang Chao">
-    <!-- Open Graph -->
     <meta property="og:title" content="王超 | AI Full-Stack Engineer">
     <meta property="og:description" content="11年全栈经验，专注 AI Agent 与 LLM 应用落地">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://coldxiangyu.top">
     <title>王超 | AI Full-Stack Engineer</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="logo">WC<span class="logo-dot">.</span></a>
-            <div class="nav-links" id="navLinks">
-                <a href="#about">关于</a>
-                <a href="#projects">项目</a>
-                <a href="#services">服务</a>
-                <a href="#experience">经历</a>
-                <a href="#contact">联系</a>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="菜单">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <canvas id="particles"></canvas>
-        <div class="hero-content">
-            <div class="hero-badge">👋 Hello, I'm</div>
-            <h1 class="hero-title">
-                <span class="name">王超</span>
-                <span class="name-en">Wang Chao</span>
-            </h1>
-            <p class="hero-subtitle">AI Full-Stack Engineer</p>
-            <p class="hero-tagline">11年全栈经验，专注 AI Agent 与 LLM 应用落地</p>
-            <p class="hero-tagline-en">Turning AI concepts into production-ready products</p>
-            <div class="hero-stats">
-                <div class="stat"><span class="stat-num">11+</span><span class="stat-label">年经验</span></div>
-                <div class="stat"><span class="stat-num">6+</span><span class="stat-label">开源项目</span></div>
-                <div class="stat"><span class="stat-num">∞</span><span class="stat-label">AI 热情</span></div>
-            </div>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">查看项目 →</a>
-                <a href="#contact" class="btn btn-secondary">联系我</a>
-            </div>
-        </div>
-        <div class="scroll-hint">
-            <span>↓</span>
-        </div>
-    </section>
+    <div class="layout">
+        <!-- ========== LEFT: Fixed Sidebar ========== -->
+        <header class="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-top">
+                    <h1 class="name">王超</h1>
+                    <h2 class="title">AI Full-Stack Engineer</h2>
+                    <p class="tagline">11 年全栈经验，把 AI 从 Demo 做成产品。</p>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
+                    <!-- Navigation -->
+                    <nav class="nav" id="nav">
+                        <a href="#about" class="nav-link active">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-text">关于</span>
+                        </a>
+                        <a href="#experience" class="nav-link">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-text">经历</span>
+                        </a>
+                        <a href="#projects" class="nav-link">
+                            <span class="nav-indicator"></span>
+                            <span class="nav-text">项目</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://github.com/coldxiangyu163" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:coldxiangyu@gmail.com" aria-label="Email" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                    <a href="https://x.com/coldxiangyu" target="_blank" rel="noopener" aria-label="X (Twitter)" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== RIGHT: Scrollable Content ========== -->
+        <main class="content">
+
+            <!-- About -->
+            <section id="about" class="section">
+                <h3 class="section-heading">关于</h3>
                 <div class="about-text">
-                    <p>11年全栈开发经验，从传统 Web 架构到 AI 原生应用，持续追踪并实践最前沿的 AI 技术。</p>
-                    <p>我相信 <strong>AI 不应该只停留在 Demo 阶段</strong>。我的工作就是把 LLM、Agent、自动化这些能力，打磨成真正能跑在生产环境里的产品。</p>
-                    <p>目前专注于 MCP (Model Context Protocol) 生态、多 Agent 协作系统、以及企业级 AI 应用落地。</p>
+                    <p>从 2015 年写下第一行 Java 到现在，我经历了传统 Web → 微服务 → 云原生 → AI 原生的完整技术周期。</p>
+                    <p>我相信 <strong>AI 不应该停留在 Demo 阶段</strong>。我的工作是把 LLM、Agent、自动化这些能力，打磨成真正能跑在生产环境里的产品。目前专注于 <strong>MCP 生态</strong>、<strong>多 Agent 协作</strong>、以及<strong>企业级 AI 应用落地</strong>。</p>
+                    <p>技术之外，我是一个 5 岁孩子的父亲，这让我更在意"把事情做对"而不是"把事情做快"。</p>
                 </div>
-                <div class="skills">
-                    <h3>技术栈</h3>
-                    <div class="skill-category">
-                        <h4>🤖 AI / LLM</h4>
-                        <div class="skill-tags">
-                            <span class="tag">LLM / GPT</span>
-                            <span class="tag">AI Agent</span>
-                            <span class="tag">MCP</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">Prompt Engineering</span>
-                            <span class="tag">Fine-tuning</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>💻 开发</h4>
-                        <div class="skill-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">JavaScript / TypeScript</span>
-                            <span class="tag">React / Next.js</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Java</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>🛠 工程</h4>
-                        <div class="skill-tags">
-                            <span class="tag">Docker / K8s</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Linux</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">DevOps</span>
-                        </div>
-                    </div>
+                <div class="tech-list">
+                    <span>Python</span>
+                    <span>TypeScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Java</span>
+                    <span>LLM / GPT</span>
+                    <span>AI Agent</span>
+                    <span>MCP</span>
+                    <span>RAG</span>
+                    <span>Docker / K8s</span>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">项目作品</h2>
-            <p class="section-subtitle">每一个项目都是从真实需求出发，解决实际问题</p>
-            <div class="projects-grid">
-                
-                <div class="project-card featured">
-                    <div class="project-badge">🔥 Featured</div>
-                    <div class="project-image">
-                        <div class="project-placeholder">🎨</div>
+            <!-- Experience -->
+            <section id="experience" class="section">
+                <h3 class="section-heading">经历</h3>
+
+                <div class="exp-item">
+                    <div class="exp-time">2024 — 至今</div>
+                    <div class="exp-body">
+                        <h4 class="exp-title">AI 全栈工程师 · 独立开发者</h4>
+                        <p class="exp-desc">专注 AI Agent 与 LLM 应用落地。构建了多个开源项目，涵盖 AI 代码审查、Prompt 管理、多 Agent 协作等方向。深度参与 MCP 生态建设。</p>
+                        <div class="exp-tags">
+                            <span>AI Agent</span>
+                            <span>MCP</span>
+                            <span>LLM</span>
+                            <span>Python</span>
+                            <span>Open Source</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>PromptVault</h3>
-                        <p>AI 生图 Prompt 视觉图库。自动采集 Civitai / PromptHero 热门 prompt，内置 NSFW 过滤器，支持标签筛选和搜索。300+ 高质量 prompt 持续更新中。</p>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-time">2019 — 2024</div>
+                    <div class="exp-body">
+                        <h4 class="exp-title">高级全栈工程师 · 北京</h4>
+                        <p class="exp-desc">负责核心业务系统架构设计与开发，主导微服务拆分与云原生改造。带领团队完成多个大型项目交付，日均处理百万级请求。</p>
+                        <div class="exp-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>Docker</span>
+                            <span>K8s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-time">2015 — 2019</div>
+                    <div class="exp-body">
+                        <h4 class="exp-title">全栈开发工程师 · 北京</h4>
+                        <p class="exp-desc">从零搭建多个 Web 应用，覆盖后端 API、前端 SPA、数据库设计、运维部署全流程。积累了扎实的工程化能力。</p>
+                        <div class="exp-tags">
+                            <span>Java</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                            <span>Linux</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/resume.pdf" class="inline-link" target="_blank">查看完整简历 →</a>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="section">
+                <h3 class="section-heading">项目</h3>
+
+                <a href="https://coldxiangyu163.github.io/prompt-vault/" target="_blank" rel="noopener" class="project-card featured">
+                    <div class="project-img">
+                        <div class="project-img-placeholder">
+                            <span>PromptVault</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 class="project-name">
+                            PromptVault
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                        </h4>
+                        <p class="project-desc">AI 生图 Prompt 视觉图库。自动采集 Civitai / PromptHero 热门 prompt，内置 NSFW 过滤，支持标签筛选和搜索。300+ 高质量 prompt 持续更新。</p>
                         <div class="project-tags">
-                            <span class="tag-sm">Python</span>
-                            <span class="tag-sm">Web Scraping</span>
-                            <span class="tag-sm">Content Filter</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/prompt-vault" target="_blank" class="link">⭐ GitHub</a>
-                            <a href="https://coldxiangyu163.github.io/prompt-vault/" target="_blank" class="link">🌐 在线 Demo</a>
+                            <span>Python</span>
+                            <span>Web Scraping</span>
+                            <span>GitHub Pages</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🤖</div>
+                <a href="https://github.com/coldxiangyu163/ai-git-review" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-placeholder">
+                            <span>AI Review</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Nanobot Cluster</h3>
-                        <p>多 Agent 协作系统，支持任务分发、状态管理、异步执行。基于 MCP 协议的 Agent 集群架构，可视化任务队列。</p>
+                    <div class="project-info">
+                        <h4 class="project-name">
+                            AI Git Review
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                        </h4>
+                        <p class="project-desc">AI 驱动的代码审查 CLI。git commit 前自动分析 staged diff，生成质量报告和改进建议。零成本，支持 Gemini / DeepSeek 双模型。</p>
                         <div class="project-tags">
-                            <span class="tag-sm">Python</span>
-                            <span class="tag-sm">MCP</span>
-                            <span class="tag-sm">Multi-Agent</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/nanobot-cluster" target="_blank" class="link">⭐ GitHub</a>
+                            <span>Node.js</span>
+                            <span>LLM</span>
+                            <span>CLI</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🔍</div>
+                <a href="https://github.com/coldxiangyu163/geo-analyzer" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-placeholder">
+                            <span>GEO</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>AI Git Review</h3>
-                        <p>AI 驱动的代码审查 CLI 工具。自动分析 Git diff，生成代码质量报告和改进建议。支持 Gemini / DeepSeek 双模型 fallback。</p>
+                    <div class="project-info">
+                        <h4 class="project-name">
+                            GEO Analyzer
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                        </h4>
+                        <p class="project-desc">AI 搜索引擎可见性分析工具。查询 ChatGPT / Perplexity / Gemini，分析网站在 AI 搜索中的排名，输出 GEO 优化建议。</p>
                         <div class="project-tags">
-                            <span class="tag-sm">Node.js</span>
-                            <span class="tag-sm">LLM</span>
-                            <span class="tag-sm">CLI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/ai-git-review" target="_blank" class="link">⭐ GitHub</a>
+                            <span>Python</span>
+                            <span>GEO</span>
+                            <span>AI Search</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">📚</div>
+                <a href="https://github.com/coldxiangyu163/nanobot-docs" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-placeholder">
+                            <span>Docs</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Nanobot Docs</h3>
-                        <p>Nanobot AI 助手框架的官方文档站。完整的 API 文档、Skill 开发指南、MCP 集成最佳实践。</p>
+                    <div class="project-info">
+                        <h4 class="project-name">
+                            Nanobot Docs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                        </h4>
+                        <p class="project-desc">Nanobot AI 助手框架文档站。完整的 API 文档、Skill 开发指南、MCP 集成最佳实践。</p>
                         <div class="project-tags">
-                            <span class="tag-sm">Documentation</span>
-                            <span class="tag-sm">MCP</span>
-                            <span class="tag-sm">AI Agent</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/nanobot-docs" target="_blank" class="link">⭐ GitHub</a>
+                            <span>Documentation</span>
+                            <span>MCP</span>
+                            <span>AI Agent</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">✍️</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Novel Commands</h3>
-                        <p>AI 辅助小说创作工具。提供角色设定管理、情节生成、对话优化、世界观构建等创作辅助功能。</p>
-                        <div class="project-tags">
-                            <span class="tag-sm">Python</span>
-                            <span class="tag-sm">LLM</span>
-                            <span class="tag-sm">Creative AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/ai-novel-commands" target="_blank" class="link">⭐ GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            </section>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🚀</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>OmniBot</h3>
-                        <p>MCP-native AI Agent 框架。统一的多模型、多工具集成接口，支持 Skill 热加载和任务编排。</p>
-                        <div class="project-tags">
-                            <span class="tag-sm">Python</span>
-                            <span class="tag-sm">MCP</span>
-                            <span class="tag-sm">Framework</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/coldxiangyu163/omnibot" target="_blank" class="link">⭐ GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Footer -->
+            <footer class="footer">
+                <p>以 <a href="https://brittanychiang.com" target="_blank" rel="noopener" class="inline-link">Brittany Chiang</a> 的设计为灵感，用纯 HTML/CSS/JS 手工构建。</p>
+            </footer>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">服务能力</h2>
-            <p class="section-subtitle">如果你有以下需求，欢迎联系我</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI Agent 定制开发</h3>
-                    <p>基于 MCP 协议的 AI Agent 系统设计与开发。支持多模型集成、工具扩展、任务编排、多 Agent 协作。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧠</div>
-                    <h3>LLM 应用集成</h3>
-                    <p>RAG 知识库搭建、Prompt 工程优化、模型微调、API 网关设计、LLM 应用的工程化部署。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>自动化工作流</h3>
-                    <p>业务流程自动化、数据采集与处理管线、CI/CD 流水线搭建、DevOps 工具链整合。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>技术咨询</h3>
-                    <p>AI 技术选型咨询、系统架构设计评审、团队 AI 能力建设、技术方案可行性分析。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">职业经历</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2022 — 至今</div>
-                        <h3>AI 全栈工程师</h3>
-                        <p class="timeline-company">深圳 · 互联网公司</p>
-                        <p>主导 AI Agent 系统架构设计与落地实施。负责 LLM 应用集成、MCP 生态工具开发、多 Agent 协作系统搭建。推动团队 AI 工程化转型。</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2018 — 2022</div>
-                        <h3>高级全栈开发工程师</h3>
-                        <p class="timeline-company">北京 · 互联网公司</p>
-                        <p>负责核心业务系统的架构设计与开发。主导微服务改造、性能优化、自动化测试体系搭建。带领小团队完成多个重要项目交付。</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-period">2015 — 2018</div>
-                        <h3>全栈开发工程师</h3>
-                        <p class="timeline-company">北京 · 科技公司</p>
-                        <p>负责 Web 应用全栈开发、RESTful API 设计、数据库优化。积累了扎实的工程化开发经验和技术深度。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <div class="contact-content">
-                <p class="contact-intro">无论是项目合作、技术咨询还是工作机会，都欢迎与我交流。</p>
-                <div class="contact-methods">
-                    <a href="mailto:coldxiangyu@163.com" class="contact-card">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <div class="contact-label">Email</div>
-                            <div class="contact-value">coldxiangyu@163.com</div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/coldxiangyu163" target="_blank" class="contact-card">
-                        <span class="contact-icon">💻</span>
-                        <div>
-                            <div class="contact-label">GitHub</div>
-                            <div class="contact-value">github.com/coldxiangyu163</div>
-                        </div>
-                    </a>
-                    <a href="https://coldxiangyu.top" class="contact-card">
-                        <span class="contact-icon">🌐</span>
-                        <div>
-                            <div class="contact-label">Website</div>
-                            <div class="contact-value">coldxiangyu.top</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 王超 Wang Chao. All rights reserved.</p>
-            <p class="footer-note">Built with ❤️ and AI</p>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>

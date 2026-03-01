@@ -133,21 +133,7 @@ const COMMANDS = {
 
     neofetch: () => [
         '',
-        '<span class="ascii-art">        ██╗    ██╗ ██████╗</span>     <span class="c-white c-bold">visitor@wangchao</span>',
-        '<span class="ascii-art">        ██║    ██║██╔════╝</span>     <span class="c-white">─────────────────</span>',
-        '<span class="ascii-art">        ██║ █╗ ██║██║     </span>     <span class="c-cyan">OS:</span>      <span class="c-white">AI Engineer OS v11.0</span>',
-        '<span class="ascii-art">        ██║███╗██║██║     </span>     <span class="c-cyan">Host:</span>    <span class="c-white">王超 (Wang Chao)</span>',
-        '<span class="ascii-art">        ╚███╔███╔╝╚██████╗</span>     <span class="c-cyan">Kernel:</span>  <span class="c-white">Full-Stack v4.0-ai</span>',
-        '<span class="ascii-art">         ╚══╝╚══╝  ╚═════╝</span>     <span class="c-cyan">Uptime:</span>  <span class="c-white">11 years</span>',
-        '                              <span class="c-cyan">Shell:</span>   <span class="c-white">Python / TypeScript / Java</span>',
-        '                              <span class="c-cyan">DE:</span>      <span class="c-white">AI Agent + MCP</span>',
-        '                              <span class="c-cyan">WM:</span>      <span class="c-white">React + Next.js</span>',
-        '                              <span class="c-cyan">Theme:</span>   <span class="c-white">Dark [always]</span>',
-        '                              <span class="c-cyan">CPU:</span>     <span class="c-white">LLM-powered (GPT/Claude/Gemini)</span>',
-        '                              <span class="c-cyan">GPU:</span>     <span class="c-white">Multi-Agent Orchestration</span>',
-        '                              <span class="c-cyan">Memory:</span>  <span class="c-white">RAG + Vector DB</span>',
-        '',
-        '                              <span style="color:#ff4444">██</span><span style="color:#ff8800">██</span><span style="color:#ffdd00">██</span><span style="color:#00ff41">██</span><span style="color:#00d4ff">██</span><span style="color:#6666ff">██</span><span style="color:#ff79c6">██</span><span style="color:#ffffff">██</span>',
+        '<div class="neofetch"><div class="neofetch-logo"><span class="ascii-art">  ██╗    ██╗  ██████╗\n  ██║    ██║ ██╔════╝\n  ██║ █╗ ██║ ██║     \n  ██║███╗██║ ██║     \n  ╚███╔███╔╝ ╚██████╗\n   ╚══╝╚══╝   ╚═════╝</span></div><div class="neofetch-info"><span class="c-white c-bold">visitor@wangchao</span>\n<span class="c-white">─────────────────</span>\n<span class="c-cyan">OS:</span>      <span class="c-white">AI Engineer OS v11.0</span>\n<span class="c-cyan">Host:</span>    <span class="c-white">王超 (Wang Chao)</span>\n<span class="c-cyan">Kernel:</span>  <span class="c-white">Full-Stack v4.0-ai</span>\n<span class="c-cyan">Uptime:</span>  <span class="c-white">11 years</span>\n<span class="c-cyan">Shell:</span>   <span class="c-white">Python / TypeScript / Java</span>\n<span class="c-cyan">DE:</span>      <span class="c-white">AI Agent + MCP</span>\n<span class="c-cyan">WM:</span>      <span class="c-white">React + Next.js</span>\n<span class="c-cyan">Theme:</span>   <span class="c-white">Dark [always]</span>\n<span class="c-cyan">CPU:</span>     <span class="c-white">LLM-powered (GPT/Claude/Gemini)</span>\n<span class="c-cyan">GPU:</span>     <span class="c-white">Multi-Agent Orchestration</span>\n<span class="c-cyan">Memory:</span>  <span class="c-white">RAG + Vector DB</span>\n\n<span style="color:#ff4444">██</span><span style="color:#ff8800">██</span><span style="color:#ffdd00">██</span><span style="color:#00ff41">██</span><span style="color:#00d4ff">██</span><span style="color:#6666ff">██</span><span style="color:#ff79c6">██</span><span style="color:#ffffff">██</span></div></div>',
         ''
     ],
 

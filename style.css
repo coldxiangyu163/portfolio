@@ -179,6 +179,44 @@ a:hover {
     font-size: 11px;
 }
 
+/* Neofetch two-column layout */
+.neofetch {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.neofetch-logo {
+    flex-shrink: 0;
+}
+
+.neofetch-logo .ascii-art {
+    white-space: pre;
+    line-height: 1.25;
+    font-size: 12px;
+}
+
+.neofetch-info {
+    white-space: pre;
+    line-height: 1.6;
+    font-size: 13.5px;
+}
+
+@media (max-width: 600px) {
+    .neofetch {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .neofetch-logo .ascii-art {
+        font-size: 8px;
+    }
+
+    .neofetch-info {
+        font-size: 12px;
+    }
+}
+
 /* ========== Input Line ========== */
 .input-line {
     display: flex;
